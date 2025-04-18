@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-class_name character
+class_name Character
 
 # rychlostp ohybu doleva/doprava
 var speed = 150

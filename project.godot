@@ -15,6 +15,14 @@ run/main_scene="uid://nwo4rfyrij3u"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Game="*res://Engine/game.gd"
+
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 left={
