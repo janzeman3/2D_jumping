@@ -1,8 +1,9 @@
 extends Area2D
 
-class_name Melon
-
 func _on_body_entered(body: Node2D) -> void:
+	print("hit")
 	if body is Character:
-		Game.addScore(50)
+		var score = get_meta("Score")
+		if score:
+			Game.addScore(score)
 		queue_free()

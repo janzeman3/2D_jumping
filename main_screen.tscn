@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://nwo4rfyrij3u"]
+[gd_scene load_steps=8 format=3 uid="uid://nwo4rfyrij3u"]
 
 [ext_resource type="Script" uid="uid://dcylw31kqn7gk" path="res://main_screen.gd" id="1_kwhh3"]
 [ext_resource type="Texture2D" uid="uid://coqkbni8qdmwx" path="res://PixelAdventure1/Terrain/Terrain (16x16).png" id="1_tjn2e"]
 [ext_resource type="PackedScene" uid="uid://cbxqrq424k80c" path="res://Items/melon.tscn" id="3_7a4el"]
 [ext_resource type="PackedScene" uid="uid://u0png8js0xcq" path="res://Characters/virtual_guy.tscn" id="5_4sclt"]
+[ext_resource type="PackedScene" uid="uid://e5hreo534tjb" path="res://Items/apple.tscn" id="5_ywh4s"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0p2i"]
 texture = ExtResource("1_tjn2e")
@@ -273,10 +274,7 @@ horizontal_alignment = 2
 position = Vector2(537, 440)
 
 [node name="Melon" parent="." instance=ExtResource("3_7a4el")]
-position = Vector2(265, 443)
+position = Vector2(458, 514)
 
-[node name="Melon2" parent="." instance=ExtResource("3_7a4el")]
-position = Vector2(631, 557)
-
-[node name="Melon3" parent="." instance=ExtResource("3_7a4el")]
-position = Vector2(800, 581)
+[node name="Apple" parent="." instance=ExtResource("5_ywh4s")]
+position = Vector2(338, 398)

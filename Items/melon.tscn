@@ -1,6 +1,6 @@
 [gd_scene load_steps=22 format=3 uid="uid://cbxqrq424k80c"]
 
-[ext_resource type="Script" uid="uid://bm3gvjxp4ytnh" path="res://Items/melon.gd" id="1_08dla"]
+[ext_resource type="Script" uid="uid://bm3gvjxp4ytnh" path="res://Engine/item.gd" id="1_08dla"]
 [ext_resource type="Texture2D" uid="uid://duch00cx1qf1h" path="res://PixelAdventure1/Fruits/Melon.png" id="1_o1ayq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_08dla"]
@@ -135,12 +135,13 @@ points = PackedVector2Array(6, 2, 0, 5, -7, 2, -8, -6, 8, -6)
 
 [node name="Melon" type="Area2D"]
 script = ExtResource("1_08dla")
+metadata/Score = 50
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_qfdug")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.989379
+frame_progress = 0.0439262
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("ConvexPolygonShape2D_dx7yx")
