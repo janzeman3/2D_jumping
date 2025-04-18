@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://nwo4rfyrij3u"]
+[gd_scene load_steps=14 format=3 uid="uid://nwo4rfyrij3u"]
 
 [ext_resource type="Script" uid="uid://dcylw31kqn7gk" path="res://main_screen.gd" id="1_kwhh3"]
 [ext_resource type="Texture2D" uid="uid://coqkbni8qdmwx" path="res://PixelAdventure1/Terrain/Terrain (16x16).png" id="1_tjn2e"]
@@ -6,6 +6,11 @@
 [ext_resource type="PackedScene" uid="uid://u0png8js0xcq" path="res://Characters/virtual_guy.tscn" id="5_4sclt"]
 [ext_resource type="PackedScene" uid="uid://e5hreo534tjb" path="res://Items/apple.tscn" id="5_ywh4s"]
 [ext_resource type="PackedScene" uid="uid://m25hloihc7t" path="res://Items/banana.tscn" id="6_ywh4s"]
+[ext_resource type="PackedScene" uid="uid://6po6joaja8w0" path="res://Items/cherries.tscn" id="7_ue4rx"]
+[ext_resource type="PackedScene" uid="uid://b0c51xlg68xmw" path="res://Items/kiwi.tscn" id="8_sjiej"]
+[ext_resource type="PackedScene" uid="uid://rxl274wefg7b" path="res://Items/orange.tscn" id="9_4sv2p"]
+[ext_resource type="PackedScene" uid="uid://d3anl5e1k1ja7" path="res://Items/pineapple.tscn" id="10_0osx7"]
+[ext_resource type="PackedScene" uid="uid://bsmkequc1sufb" path="res://Items/strawberry.tscn" id="11_62wn8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0p2i"]
 texture = ExtResource("1_tjn2e")
@@ -272,13 +277,28 @@ text = "0"
 horizontal_alignment = 2
 
 [node name="VirtualGuy" parent="." instance=ExtResource("5_4sclt")]
-position = Vector2(537, 440)
+position = Vector2(263, 429)
 
 [node name="Melon" parent="." instance=ExtResource("3_7a4el")]
-position = Vector2(458, 514)
+position = Vector2(980, 607)
 
 [node name="Apple" parent="." instance=ExtResource("5_ywh4s")]
-position = Vector2(338, 398)
+position = Vector2(648, 610)
 
 [node name="Banana" parent="." instance=ExtResource("6_ywh4s")]
-position = Vector2(620, 594)
+position = Vector2(789, 610)
+
+[node name="Cherries" parent="." instance=ExtResource("7_ue4rx")]
+position = Vector2(741, 612)
+
+[node name="Kiwi" parent="." instance=ExtResource("8_sjiej")]
+position = Vector2(696, 611)
+
+[node name="Orange" parent="." instance=ExtResource("9_4sv2p")]
+position = Vector2(886, 607)
+
+[node name="Pineapple" parent="." instance=ExtResource("10_0osx7")]
+position = Vector2(841, 608)
+
+[node name="Strawberry" parent="." instance=ExtResource("11_62wn8")]
+position = Vector2(601, 613)

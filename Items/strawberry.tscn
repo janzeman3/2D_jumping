@@ -1,0 +1,143 @@
+[gd_scene load_steps=21 format=3 uid="uid://bsmkequc1sufb"]
+
+[ext_resource type="Script" uid="uid://bm3gvjxp4ytnh" path="res://Engine/item.gd" id="1_uysx6"]
+[ext_resource type="Texture2D" uid="uid://dnaxwuk3rn302" path="res://PixelAdventure1/Fruits/Strawberry.png" id="2_wat8j"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aolof"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ih8i3"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqmxm"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10vci"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqf7d"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5bek"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdmpe"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nk6ve"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(256, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecygo"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ma0a2"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v85a4"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_86t1m"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(384, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxbnq"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(416, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hvbp"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(448, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co0ru"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(480, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crtp0"]
+atlas = ExtResource("2_wat8j")
+region = Rect2(512, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_eeqj6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aolof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ih8i3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqmxm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10vci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqf7d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5bek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdmpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nk6ve")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecygo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ma0a2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v85a4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_86t1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxbnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hvbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co0ru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crtp0")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xwn5f"]
+radius = 4.0
+
+[node name="Strawberry" type="Area2D"]
+script = ExtResource("1_uysx6")
+metadata/Score = 10
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_eeqj6")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.863907
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_xwn5f")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
