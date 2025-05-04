@@ -27,12 +27,12 @@ func gameStart():
 	$Time.start()
 	Game.restart()
 	$EndCheck.start()
-	$VirtualGuy.isOn = true
+	#$VirtualGuy.isOn = true
 
 func gameOver():
 	$Time.stop()
 	$EndCheck.stop()
-	$VirtualGuy.isOn = false
+	#$VirtualGuy.isOn = false
 	move_child($GameMenu, -1)
 	$GameMenu.visible = true
 	$"GameMenu/YourTime".text = $TimeCounter.text
