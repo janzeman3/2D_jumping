@@ -1,8 +1,34 @@
 extends Node2D
 
+var Player
+
 func _ready() -> void:
+	# connect global game script
 	Game.scoreAdded.connect(on_addScore)
+	
+	# get player object containing the main character
+	Player = get_player()
+	if not Player:
+		print("ERROR: Player not found...exiting.")
+		get_tree().quit()
+	
+	# start game
 	gameStart()
+
+
+# function searches player object
+func get_player() -> Character:
+	var child_number = get_child_count()
+	var idx = 0
+
+	while idx < child_number:
+		if get_child(idx) is Character:
+			print("Player found.")
+			return get_child(idx) as Character
+		idx += 1
+	
+	print("Not found")
+	return null
 
 func on_addScore():
 	$ScoreCounter.text = "%d" % Game.score
@@ -27,12 +53,12 @@ func gameStart():
 	$Time.start()
 	Game.restart()
 	$EndCheck.start()
-	#$VirtualGuy.isOn = true
+	Player.isOn = true
 
 func gameOver():
 	$Time.stop()
 	$EndCheck.stop()
-	#$VirtualGuy.isOn = false
+	Player.isOn = false
 	move_child($GameMenu, -1)
 	$GameMenu.visible = true
 	$"GameMenu/YourTime".text = $TimeCounter.text
