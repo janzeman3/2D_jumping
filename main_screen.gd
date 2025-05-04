@@ -15,7 +15,7 @@ func _ready() -> void:
 	# start game
 	gameStart()
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# check whether Esc pressed
 	if Input.is_action_just_pressed("escape"):
 		gameOver()
