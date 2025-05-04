@@ -15,6 +15,10 @@ func _ready() -> void:
 	# start game
 	gameStart()
 
+func _process(delta: float) -> void:
+	# check whether Esc pressed
+	if Input.is_action_just_pressed("escape"):
+		gameOver()
 
 # function searches player object
 func get_player() -> Character:
