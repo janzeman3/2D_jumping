@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://nwo4rfyrij3u"]
+[gd_scene load_steps=14 format=3 uid="uid://nwo4rfyrij3u"]
 
 [ext_resource type="Script" uid="uid://dcylw31kqn7gk" path="res://main_screen.gd" id="1_kwhh3"]
 [ext_resource type="Texture2D" uid="uid://coqkbni8qdmwx" path="res://PixelAdventure1/Terrain/Terrain (16x16).png" id="1_tjn2e"]
@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://b0c51xlg68xmw" path="res://Items/kiwi.tscn" id="8_sjiej"]
 [ext_resource type="PackedScene" uid="uid://rxl274wefg7b" path="res://Items/orange.tscn" id="9_4sv2p"]
 [ext_resource type="PackedScene" uid="uid://d3anl5e1k1ja7" path="res://Items/pineapple.tscn" id="10_0osx7"]
-[ext_resource type="PackedScene" uid="uid://bsmkequc1sufb" path="res://Items/strawberry.tscn" id="11_62wn8"]
 [ext_resource type="PackedScene" uid="uid://yr8dpdqjabi3" path="res://Characters/mask_dude.tscn" id="12_7sxnj"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62wn8"]
@@ -339,6 +338,7 @@ wait_time = 0.5
 [node name="Time" type="Timer" parent="."]
 process_callback = 0
 wait_time = 0.2
+
 [node name="TimeCounter" type="Label" parent="."]
 offset_left = 14.0
 offset_top = 16.0
@@ -446,9 +446,6 @@ position = Vector2(678, 560)
 [node name="Kiwi" parent="." instance=ExtResource("8_sjiej")]
 position = Vector2(644, 558)
 
-[node name="Melon" parent="." instance=ExtResource("3_7a4el")]
-position = Vector2(980, 607)
-
 [node name="Banana" parent="." instance=ExtResource("6_ywh4s")]
 position = Vector2(839, 564)
 
@@ -466,14 +463,6 @@ position = Vector2(219, 555)
 
 [node name="Orange2" parent="." instance=ExtResource("9_4sv2p")]
 position = Vector2(101, 556)
-
-[node name="Strawberry" parent="." instance=ExtResource("11_62wn8")]
-position = Vector2(601, 613)
-
-[connection signal="pressed" from="GameMenu/AgainButton" to="." method="_on_again_button_pressed"]
-[connection signal="pressed" from="GameMenu/ExitButton" to="." method="_on_exit_button_pressed"]
-[connection signal="timeout" from="EndCheck" to="." method="_on_end_check_timeout"]
-[connection signal="timeout" from="Time" to="." method="_on_time_timeout"]
 
 [node name="Apple2" parent="." instance=ExtResource("5_ywh4s")]
 position = Vector2(302, 360)
@@ -522,3 +511,8 @@ position = Vector2(37, 379)
 
 [node name="Melon39" parent="." instance=ExtResource("3_7a4el")]
 position = Vector2(73, 393)
+
+[connection signal="pressed" from="GameMenu/AgainButton" to="." method="_on_again_button_pressed"]
+[connection signal="pressed" from="GameMenu/ExitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="timeout" from="EndCheck" to="." method="_on_end_check_timeout"]
+[connection signal="timeout" from="Time" to="." method="_on_time_timeout"]
