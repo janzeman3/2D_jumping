@@ -13,6 +13,14 @@
 [ext_resource type="PackedScene" uid="uid://bsmkequc1sufb" path="res://Items/strawberry.tscn" id="11_62wn8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62wn8"]
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0p2i"]
 texture = ExtResource("1_tjn2e")
@@ -265,44 +273,48 @@ sources/0 = SubResource("TileSetAtlasSource_w0p2i")
 script = ExtResource("1_kwhh3")
 
 [node name="GameMenu" type="Panel" parent="."]
-offset_right = 1150.0
-offset_bottom = 647.0
+visible = false
+offset_left = 145.0
+offset_top = 144.0
+offset_right = 1002.0
+offset_bottom = 574.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_62wn8")
 
 [node name="YourTimeLabel" type="Label" parent="GameMenu"]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 147.0
-offset_right = 1135.0
-offset_bottom = 189.0
+offset_left = 3.0
+offset_top = 39.0
+offset_right = 855.0
+offset_bottom = 84.0
 theme_override_font_sizes/font_size = 32
 text = "Your time:"
 horizontal_alignment = 1
 
 [node name="YourTime" type="Label" parent="GameMenu"]
 layout_mode = 0
-offset_left = 16.0
-offset_top = 196.0
-offset_right = 1135.0
-offset_bottom = 284.0
+offset_left = 5.0
+offset_top = 92.0
+offset_right = 854.0
+offset_bottom = 180.0
 theme_override_font_sizes/font_size = 64
 text = "00:00"
 horizontal_alignment = 1
 
 [node name="AgainButton" type="Button" parent="GameMenu"]
 layout_mode = 0
-offset_left = 392.0
-offset_top = 332.0
-offset_right = 805.0
-offset_bottom = 424.0
+offset_left = 237.0
+offset_top = 199.0
+offset_right = 650.0
+offset_bottom = 291.0
 theme_override_font_sizes/font_size = 48
 text = "Try again!"
 
 [node name="ExitButton" type="Button" parent="GameMenu"]
-offset_left = 393.0
-offset_top = 434.0
-offset_right = 804.0
-offset_bottom = 529.0
+layout_mode = 0
+offset_left = 237.0
+offset_top = 303.0
+offset_right = 648.0
+offset_bottom = 398.0
 theme_override_font_sizes/font_size = 36
 text = "Exit"
 
